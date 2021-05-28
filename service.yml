@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-docker
+  labels:
+    service: fastapi-docker
+spec:
+  selector:
+    app: fastapi-docker
+  ports:
+  - protocol: "TCP"
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
